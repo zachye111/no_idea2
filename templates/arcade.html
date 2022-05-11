@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "PB Arcade" %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+</head>
+{% block body %}
+<div class="container-fluid" style="background-color: var(--turqoise); height: available; width: 100%; background-repeat: no-repeat; background-attachment: fixed">
+
+
+    <style>
+        /* Parent Container */
+        .content_img{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        /* Child Text Container */
+        .content_img div{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: black;
+            color: white;
+            margin-bottom: 5px;
+            font-family: sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: visibility 0s, opacity 0.5s linear;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        /* Hover on Parent Container */
+        .content_img:hover{
+            cursor: pointer;
+        }
+
+        .content_img:hover div{
+            width: 150px;
+            padding: 8px 15px;
+            visibility: visible;
+            opacity: 0.7;
+        }
+
+        .hoverclick1{
+            background: url('../static/assets/spiderman.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick2{
+            background: url('../static/assets/darkknight.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick3{
+            background: url('../static/assets/jurassicpark.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick4{
+            background: url('../static/assets/starwarsep6.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick5{
+            background: url('../static/assets/RESIZEamongus-preview.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick6{
+            background: url('../static/assets/RESIZEfortnite-preview.jpg') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick7{
+            background: url('../static/assets/RESIZEseaofthieves-preview.jpg') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick8{
+            background: url('../static/assets/RESIZE2k21-preview.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick9{
+            background: url('../static/assets/artworks-000132110879-yaqp5i-t500x500.jpeg') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick10{
+            background: url('../static/assets/pokemonlogoRESIZE.png') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick11{
+            background: url('../static/assets/genshinARCADE.jpg') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        .hoverclick12{
+            background: url('../static/assets/smashBrosARCADEresize2.jpg') no-repeat;
+            cursor:pointer;
+            width:500px;
+            height:500px;
+            transform: translateY(3px);
+        }
+
+        }
+        .fa:hover{
+            font-size: 3em;
+            letter-spacing: 1em;
+            transition: all .2s;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.7);
+
+        }
+        <img src="../../../Downloads/spider_man_no_way_home_india_1638191040.webp" height="1400" width="1000"/></style>
+
+    <script>
+        let i = 1;
+        let c = 0;
+        let p = 1;
+        function mature(){
+            c++;
+            while (c === 3) {
+                i--;
+                i--;
+                i--;
+                p--;
+                p--;
+                p--;
+                c--;
+                c--;
+            }
+            while (i < 4 && c === 1) {
+                if (document.getElementById("mature" + i).innerHTML = "mature" + i) {
+                    document.getElementById("mature" + i).style.visibility = "hidden";
+                    i++;
+                }
+            }
+            while (p < 4 && c === 2) {
+                if (document.getElementById("mature" + p).innerHTML = "mature" + p) {
+                    document.getElementById("mature" + p).style.visibility = "visible";
+                    p++;
+                }
+            }
+        }
+
+    </script>
+
+    <body>
+
+    <div>
+        <h1 style="font-size:75px; text-align:center; font-family: gilroy,serif;">Movies</h1>
+        <h2 style="font-size:35px; text-align:center; font-family: gilroy,serif;">Review popular movies and discover new favorites!</h2>
+        <button style="margin-left:39%" onclick="mature()" >Toggle PG-13/R Rated Movies</button>
+        <button ><a href="genre">View Genres<a/></button>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="button" id="mature1" class="fa hoverclick1" onclick="location.href = 'reviewSpiderman';" style= "margin-top:10%">
+                </div>
+                <div class="col-sm-5">
+                    <input type="button" id="mature2" class="fa hoverclick2" onclick="location.href = 'reviewDarkknight';" style= "margin-top:8%; margin-left:60%">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="button" id="mature3" class="fa hoverclick3" onclick="location.href = 'reviewJurassicpark';" style= "margin-top:10%">
+                </div>
+                <div class="col-sm-5">
+                    <input type="button" id="mature4" class="fa hoverclick4" onclick="location.href = 'reviewStarwarsep6';" style= "margin-top:8%; margin-left:60%">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+</html>

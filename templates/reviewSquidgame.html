@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Squid Game" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+{% block body %}
+<style>
+    table, th, td {
+        border:2px solid black;
+        text-align: center;
+    }
+    #deez{
+        margin-right:8%;
+    }
+</style>
+<body>
+<br>
+
+<div>
+    <p style="font-size:50px; margin-left:25%;">
+        Squidgame
+    </p>
+</div>
+<br>
+
+<div class="row">
+    <div>
+        <a> <img class="col-md-12" style="width:600px;margin-right:-15%" src="../static/assets/squidGame.png"></a>
+    </div>
+    <div class="col-md-5"><div style="font-size:25px; margin-left:0%;">
+        <a><p>
+            Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.
+        </p></a>
+    </div>
+        <div>
+            <td>
+                <a style="font-size: 20px" href="https://www.imdb.com/title/tt10919420/" class="btn btn-primary">Watch Squid Game!</a>
+            </td>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div>
+    <table style="margin-right:auto; margin-left:auto; width:65%">
+        <tr>
+            <th style="font-size:30px">Pros</th>
+            <th style="font-size:30px">Cons</th>
+        </tr>
+        <tr style="font-size:20px">
+            <td>High Intensity
+                <br>Cliff-hanger every episode
+                <br>New seasons being developed</td>
+            <td>May need to watch english dub or with captions</td>
+        </tr>
+    </table>
+</div>
+<br>
+
+<div>
+    <p style="font-size:20px; text-align:center">Available on: Netflix</p>
+</div>
+<br>
+
+
+</body>
+{% endblock %}
+</html>
