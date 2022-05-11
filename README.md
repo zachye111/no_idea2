@@ -9,28 +9,8 @@
 ## Jekyll
 #### Here is our [Jekyll](https://brianzhang2016.github.io/067/) page!
 
-## Table Of Contents
-| Week Number |
-| ------------- | 
-| [Mid Term&Vocab](#Mid-Term)    | 
-| [Week 5](#Week-5)    | 
-| [Week 4](#Week-4)    | 
-| [Week 3](#Week-3)    | 
-| [Week 2](#Week-2)    |  
-| [Week 1](#Week-1)   |   
-| [Week 0](#Week-0)    |   
-
-
-## Wireframes
-[Wireframe of Website](https://docs.google.com/document/d/117YVkBIJcQRaG9IsARubCS8t9pKdKBII1ujNwGlKgfk/edit?usp=sharing)
-
-
 ## Contributors
 ---------------------------------------
-
-Contributors: https://github.com/BrianZhang2016/067/graphs/contributors
-
-Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 
 | Name             | Journal                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -47,89 +27,55 @@ Scrum Board: https://github.com/BrianZhang2016/067/projects/1
 | Brian Zhang      | BrianZhang2016  | [Scrumboard](https://github.com/Reinhardtlotter/flask_portfolio/projects/1?card_filter_query=assignee%3Abrianzhang2016) | [Issue](https://github.com/Reinhardtlotter/flask_portfolio/issues?q=assignee%3ABrianZhang2016) | [Commits](https://github.com/Reinhardtlotter/flask_portfolio/commits?author=BrianZhang2016)          | [@BrianZhang2016](https://github.com/BrianZhang2016)  | Github Admin | 
 
 
-### Sprint Overview
-| Week Number | Issue List                                              |
-| ------------- | -------------------------------------------------------------------------|
-| Sprint 4, 5 (Week 5)|[PBL showing the How, Theme, Technicals](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+5+PBL+How+Theme+Technicals%22+)        |
-| Sprint 4, 5 (Week 4)|[Python Database Modeling](https://github.com/BrianZhang2016/067/issues?q=is%3Aopen+is%3Aissue+label%3A%22Week+4+Python+Database+Modeling%22)        |
-| Sprint 3 (Week 3)|     [WIP Project Review](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+3+WIP+Project+Review%22+)        |
-| Sprint 1, 2 (Week 2)   |     [Home Pages](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+2+Home+Pages%22)        |
-| Sprint 1, 2 (Week 1)   |     [Project Approval](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22)       |
-| Sprint 0 (Week 0)   |     [Design and Organize](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+0+Design+and+Organize%22)       |
-
-### Mid Term
-| Member | Wiki's | 
-| ------------- | -------------------------------------------------------------|
-| Leo&Stanley | [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Brian&Zach)  | 
-| Brian&Zach |  [Wiki](https://github.com/BrianZhang2016/067/wiki/Vocab-Competency-Leo&Stanley) | 
+# no_idea 
 
 
-[Back](#Table-Of-Contents) 
+| Names | Github Profile | Personal Wikis | Roles | 
+| :--- | :--- | :--- | :--- | 
+| Ethan Guo  | [@FierceExplorer](https://github.com/FierceExplorer) | [Ethan's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Ethan-Guo-Personal-Wiki) | Technical Officer |
+| Chase Ott | [@ChaseOtt](https://github.com/ChaseOtt)| [Chase's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Chase-Ott-Personal-Wiki) | Github Admin
+| Simon Brunzell |  [@SimonBrunzell](https://github.com/SimonBrunzell)| [Simon's Wiki](https://github.com/SimonBrunzell/dataStructTri3/wiki)| Primary Designer
+| Vunsh Mehta | [@vunsh](https://github.com/vunsh) | [Vunsh's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Vunsh's-personal-wiki) | Deployment Manager
+| Zach Ye |  [@zachye111](https://github.com/zachye111)| [Zack's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Zach-Ye-Personal-Wiki) | Scrum Master
 
-### Week 5
-| Member | Tangables | 
-| ------------- | -------------------------------------------------------------|
-| Brian |  [Issue](https://github.com/BrianZhang2016/067/issues/46) | 
-| Leo |  [Issue](https://github.com/BrianZhang2016/067/issues/47) | 
+## Jekyll Page 
+[https://fierceexplorer.github.io/no_idea/](https://fierceexplorer.github.io/no_idea/)
+# Project Ideas 
+* website to help students with their choosing of AP classes. 
+We want to create a website that helps students decided what AP classes they want to take. It will display the different AP classes and have different information about the AP classes. The students can filter through the AP classes and take a quiz that will decided what AP classes might be best for them.          
+* our project has been changed. Now we will make a wesbite for the boy's volleyball team sport section. Our sponsor will be them. The wesbite is basically a home page for the volleyball page very similar to the Del Norte Basketball website. 
+## Sponsor
+- Men's Vollyball 
+   * website for men's volleyball sports team 
+Functions 
+- Database of players 
+- calender or schedule 
+- Volleyball stats 
+- Player profiles 
+- School Records 
+- Contacts 
+- Volleyabll Quiz? 
 
+## PII concerns
 
+- Are website will not display personal information of players or users. 
+- There is not a lot of concerns, possible email or address exposure. 
 
-[Back](#Table-Of-Contents) 
+## hosting plan
 
+- We will use a rasberry pie to deploy
+- Every thursday at 9pm we will make sure we push all of our stuff
+- Afterwards, Vunsh will pull the code and deploy before Friday. 
 
-### Week 4
-| Members | Tickets | 
-| ------------- | -------------------------------------------------------------|
-| Zach | [Ticket](https://github.com/BrianZhang2016/067/issues/42) | 
-| Stanley | [Ticket](https://github.com/BrianZhang2016/067/issues/43) |
-| Leo | [Ticket](https://github.com/BrianZhang2016/067/issues/44) |
-| Brian | [Ticket](https://github.com/BrianZhang2016/067/issues/41) |
+## software license
 
-[Back](#Table-Of-Contents) 
+- GPL-3.0 liscense is a public liscense so it can be viewed and used
+- it is easy and understandable
+- we can potentially gain revenue using this liscense
 
-### Week 3
-| Task | Tangables | 
-| ------------- | -------------------------------------------------------------|
-| Video | [Here](https://youtu.be/w-4idyFU6Pg) | 
-| Review Ticket | [Here](https://youtu.be/w-4idyFU6Pg) | 
+![Screen Shot 2022-03-25 at 1 26 35 PM](https://www.instagram.com/p/CP18UsEn74H/?utm_medium=share_sheet)
+![image](https://user-images.githubusercontent.com/89167174/160200200-097332c5-d76a-4487-9a11-34025272ddf6.png)
 
+![image](https://user-images.githubusercontent.com/89167174/160200379-a24c57f9-21eb-49f5-b2b4-c92f5133f719.png)
 
-[Back](#Table-Of-Contents) 
-
-### Week 2
-
-| Issue  | Ticket |
-| ------------- | -------------------------------------------------------------------------|
-| [About Me Page](https://github.com/BrianZhang2016/067/issues/5)  | [Review Ticket](https://github.com/BrianZhang2016/067/issues/34) |
-
-[Back](#Table-Of-Contents) 
-
-### Week 1
-| Members | Ticket |
-| ------------- | -------------------------------------------------------------|
-| Zach | [Ticket](https://github.com/BrianZhang2016/067/issues?q=]is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Azachye111) | 
-| Stanley | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3AStanleyy03840) |
-| Leo | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3Alleosunn) |
-| Brian | [Ticket](https://github.com/BrianZhang2016/067/issues?q=is%3Aissue+label%3A%22Week+1+Project+Approval%22+assignee%3ABrianZhang2016) |
-| Crossover | [Ticket](https://github.com/BrianZhang2016/067/issues/12) |
-
-[Back](#Table-Of-Contents) 
-
-### Week 0
-| Roles   | About the Roles | 
-| ------------- | -------------------------------------------------------------|
-| Scrum Master | Ensure roles are assigned.  Build Scrum Board.   | 
-| GitHub Admin | Setup Project in Git.  Integrate any starter code from Trimester 1.  Build policies for Fork and Pull requests. |
-| Primary Designer | Primary Designer and Layout manager.  Organize Jinja2 Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page).  Establish plan for overrides on each of the User Pages. |
-| Deployment Manager | Deploy Web site.  Establish policy and frequency for updates.  Ensure site is not broken and always alive for reviews. |
-| Technical Officer | Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester.  Also, facilitates learning of Technical Concepts within Scrum Team. |
-
-[Back](#Table-Of-Contents) 
-
-
-![Screen Shot 2022-01-20 at 12 11 59 PM](https://user-images.githubusercontent.com/37047405/150419295-b6045482-06b7-4283-b7be-2a62772b8480.png)<img width="632" alt="Screen Shot 2022-01-21 at 12 29 31 PM" src="https://user-images.githubusercontent.com/89223570/150596153-f53349c3-768c-460f-a264-5e6ee8c690d6.png">
-
-
-![Uploading Screen Shot 2022-01-21 at 12.29.31 PM.png…]()
-
-
+![image](https://www.facebook.com/instagram/login_sync/)
