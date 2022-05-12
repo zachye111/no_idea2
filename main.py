@@ -88,25 +88,9 @@ def reviewMandalorian():
 def wireframe():
     return render_template("wireframe.html")
 
-@app.route('/rgb/')
-def rgb():
-    return render_template('rgb.html', images=image_data())
-
-@app.route("/binaryaddition")
-def binaryaddition():
-    return render_template("binaryaddition.html")
-
 @app.route("/colorCode")
 def colorCode():
     return render_template("colorCode.html")
-
-@app.route("/logicGates")
-def logicGates():
-    return render_template("logicGates.html")
-
-@app.route("/spaceClick")
-def spaceClick():
-    return render_template("spaceClick.html")
 
 @app.route("/github_readme")
 def github_readme():
