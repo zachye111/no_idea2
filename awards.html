@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awards</title>
+</head>
+<body>
+
+<div class="major">
+
+  <h1> Award Showcase </h1>
+
+  <p> Here is a list of the numerous accomplishments </p>
+  <p> of our amazing boy's volleyball team</p>
+
+
+  <!-- Make the color the same as the background-->
+  <p id="GFG_UP" style="font-size: 1px; color:#688868; text-align: center">
+  </p>
+
+  <p id = "GFG_DOWN" style ="font-size: 24px;border-style: outset;width:500px;position: center; text-align: center">
+  </p>
+
+  <!--Button-->
+  <div style="position: center;
+ ">
+    <button class="btn" id="button" onclick="GFG_Fun()">Awards</button>
+  </div>
+
+
+</div>
+
+<script>
+  var up = document.getElementById('GFG_UP');
+  var down = document.getElementById('GFG_DOWN');
+
+  var arr = ["2019 CIF Division 2 Champions","2021 CIF Division 1 Runner Up",
+    "NCAA National Champions 21 & 22 by a DNHS alumni",
+    "Dylan McGee, High School Athlete of the Week for the week of March 7th, 2022",
+    "Nick Everett – 2021 All-Palomar League Honorable Mention", "Dylan McGee 2021 All-Palomar League Honorable Mention",
+    "Benny Herrick - 2021 All-Palomar League 2nd Team", "Myles Henderson – 2021 All-Palomar League 1st Team"
+  ]
+
+  up.innerHTML = "Click on the button to check "
+          + "the type of element.<br><br>" + arr;
+
+  function GFG_Fun() {
+    down.innerHTML =
+            arr[Math.floor(Math.random() * arr.length)];
+  }
+</script>
+
+<style>
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 25px
+  }
+
+  .major {
+    text-align: center;
+    background-color: #688868;
+  }
+
+
+  body {
+    background-color: darkseagreen;
+  }
+
+  #button {
+    background-color: darkseagreen;
+  }
+
+
+</style>
+
+</body>
+</html>
