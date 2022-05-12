@@ -29,13 +29,13 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--turqoise);
+            background-color: var(--gray);
             color: var(--white);
             font-size: 1vw;
         }
 
         .hoverclick1{
-            background: url('../static/assets/tm067logo.png') no-repeat;
+            background: url('../static/assets/volleyballlogo.png') no-repeat;
             cursor:pointer;
             width:428px;
             height:158px;
@@ -83,7 +83,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             transition: all .2s;
             position: absolute;
             color: white;
-            background-color: #ed1b76;
+            background-color: #00356e;
             font-size: 2.5em;
         }
 
@@ -124,7 +124,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="container-fluid" style="background-image: url('/static/assets/moviesbackground.png'); height: 100%; width: 100%;">
+    <div class="container-fluid" style="background-image: url('/assets/blockimage3.png'); height: 100%; width: 100%;">
         <div class="row justify-content-end" style="padding: 2%;">
             <div class="col-2" style="text-align: right;">
                 {% block info %}
@@ -151,15 +151,15 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         <div class="row" style="position: relative; padding-bottom: 10%">
             {% block links %}
             <div class="col-4">
-            <a href="{{'moviequiz'}}" class="btn">Movie Quiz</a>
+            <a href="{{'moviequiz'}}" class="btn">Volleyball Quiz</a>
             </div>
 
             <div class="col-4">
-                <a href="{{'arcade2'}}" class="btn">Show Reviews</a>
+                <a href="{{'arcade2'}}" class="btn">Roster</a>
             </div>
 
             <div class="col-4">
-                <a href="{{'arcade'}}" class="btn">Movie Reviews</a>
+                <a href="{{'arcade'}}" class="btn">Schedule</a>
             </div>
             {% endblock %}
         </div>
@@ -183,14 +183,14 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #037a76;
+        background-color: #00356e;
         color: white;
         text-align: center;
     }
 </style>
 
 <div class="footer">
-    <p>Contributors: Leo Sun, Stanley Yan, Brian Zhang, Zachary Ye</p>
+    <p>Contributors: Zachary Ye, Simon Brunzell, Chase Ott</p>
     <p> Contact us: </p>
 </div>
 
