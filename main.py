@@ -32,6 +32,10 @@ def Stub():
 def video():
     return render_template("Mini-labs.html")
 
+@app.route('/awards/')
+def awards():
+    return render_template("awards.html")
+
 @app.route('/moviequiz/')
 def moviequiz():
     return render_template("moviequiz.html")
