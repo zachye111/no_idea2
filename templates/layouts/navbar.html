@@ -98,6 +98,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/moviequiz">Movie Quiz</a>
                             </div>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/awards">Team Awards</a>
+                            </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,6 +111,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 <a class="dropdown-item" href="/arcade2">TV Shows</a>
                                 <a class="dropdown-item" href="/stub">Temp Review</a>
                                 <a class="dropdown-item" href={{ url_for('colorCode') }}>Temp Review 2</a>
+                                <a class="dropdown-item" href={{ url_for('awards') }}>Team Awards</a>
+                                <a class="dropdown-item" href={{ url_for('Snap_Shots') }}>Snap Shots</a>
+<!--                                <a class="dropdown-item" href={{ url_for('donate') }}>Donate</a>-->
 
                             </div>
                         </li>

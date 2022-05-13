@@ -32,9 +32,18 @@ def Stub():
 def video():
     return render_template("Mini-labs.html")
 
+# --Simon--
 @app.route('/awards/')
 def awards():
     return render_template("awards.html")
+
+@app.route('/Snap_Shots/')
+def Snap_Shots():
+    return render_template("Snap_Shots.html")
+
+@app.route('/donate/')
+def donate():
+    return render_template("donate.html")
 
 @app.route('/moviequiz/')
 def moviequiz():
