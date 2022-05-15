@@ -117,6 +117,18 @@ def arcade():
 def reviewPageHollowKnight():
     return render_template("reviewPageHollowKnight.html")
 
+@app.route("/roster")
+def roster():
+    return render_template("roster.html")
+
+@app.route("/roster2")
+def roster2():
+    return render_template("roster2.html")
+
+@app.route("/roster3")
+def roster3():
+    return render_template("roster3.html")
+
 @app.route("/reviewPageMinecraft")
 def reviewPageMinecraft():
     return render_template("reviewPageMinecraft.html")

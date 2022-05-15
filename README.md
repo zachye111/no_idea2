@@ -8,3 +8,11 @@
 | Simon Brunzell |  [@SimonBrunzell](https://github.com/SimonBrunzell)| [Simon's Wiki](https://github.com/SimonBrunzell/dataStructTri3/wiki)| Primary Designer
 | Vunsh Mehta | [@vunsh](https://github.com/vunsh) | [Vunsh's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Vunsh's-personal-wiki) | Deployment Manager
 | Zach Ye |  [@zachye111](https://github.com/zachye111)| [Zack's Wiki](https://github.com/FierceExplorer/no_idea/wiki/Zach-Ye-Personal-Wiki) | Scrum Master
+
+## Future Plans
+
+ADDING:
+-Schedule
+-Calendar
+-Staff
+-Volleyball related games

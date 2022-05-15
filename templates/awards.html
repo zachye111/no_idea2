@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Awards" %}
 <html lang="en">
+{% block body %}
 <head>
   <meta charset="UTF-8">
   <title>Awards</title>
@@ -24,7 +27,7 @@
 
 
   <!-- Make the color the same as the background-->
-  <p id="GFG_UP" style="font-size: 1px; color:#688868; text-align: center">
+  <p id="GFG_UP" style="font-size: 1px; color:#00356e; text-align: center">
   </p>
 
   <p id = "GFG_DOWN" style ="font-size: 48px;border-style: outset;width:500px;position: center; text-align: center">
@@ -74,17 +77,17 @@
 
   .major {
     text-align: center;
-    background-color: #688868;
+    background-color: #00356e;
     border-style: solid; border-color: black; border-width: 5px;
   }
 
 
   body {
-    background-color: darkseagreen;
+    background-color: #00356e;
   }
 
   #button {
-    background-color: darkseagreen;
+    background-color: #ffffff;
     font-size: 20px;
   }
 
@@ -101,5 +104,5 @@
 </style>
 
 </body>
-
+{% endblock %}
 </html>
