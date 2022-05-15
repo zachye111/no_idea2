@@ -6,17 +6,25 @@
 </head>
 <body>
 
-<h1> Team Shots</h1>
+<div class="top">
+
+   <a href="awards.html"> <img src="https://grizzlax.team/wp-content/uploads/2019/03/del_norte_nighthawks.png">
+   </a>
+</div>
 
 
 
-<div class="snaps">
+<h1 class="center"> Team Shots</h1>
 
-    <p> Here is a slide show of some great photos of our team</p>
-    <p> hope you enjoy!!</p>
+
+
+<div class="center"  id="snaps" >
+
+    <p > Here is a slide show of some great photos of our team</p>
+    <p > hope you enjoy!!</p>
 
     <!-- Slideshow container -->
-    <div class="slideshow-container">
+    <div class="slideshow-container" style="text-align: center" >
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
@@ -41,17 +49,11 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
 
 
 </div>
+
+<!--<div class="bottom"></div>-->
 
 
 <script>
@@ -104,11 +106,34 @@
     }
 
     body {
-        background-color: #4e6e9f;}
+        background-color: #4e6e9f;
+        /*background-color: whitesmoke;*/
 
-    .snaps {
+    }
+
+    #snaps {
         background-color: #4f70a2;
         text-align: center;
+        /*border-style: solid; border-color: whitesmoke; border-width: 25px;*/
+    }
+
+    .bottom {
+        background-color: #97979d;
+        height: 40px;
+    }
+
+    .top {
+        height:50px;
+        width:50px;
+        position: fixed;
+        /*float: left;*/
+        padding:0px
+    }
+
+    .center {
+        padding-right: 200px"
+
+    }
 
 
 </style>
