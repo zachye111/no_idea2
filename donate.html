@@ -17,15 +17,29 @@
 
 </div>
 
+<br>
 
-<h3>Comments</h3>
 <tr>
-  <td><textarea rows = "5" cols = "100%" name = "comment" id="comment" required></textarea></td>
-  <td><input type="submit" value="post" ></td>
+    <td><textarea rows = "5" cols = "100%" name = "comment" id="comment" required></textarea></td>
+    <td><input onclick="post()" type="submit" value="post" ></td>
 </tr>
 
-<div id="posted_comments">
-  <p>...</p>
+
+
+<div id="comment_section">
+
+    <h3>Comments</h3>
+    <br>
+
+
+    <div id="posted_comments">
+      <p>...</p>
+    </div>
+
+    <div id="old_comments">
+        <p></p>
+    </div>
+
 </div>
 
 
@@ -33,11 +47,44 @@
 
 
 
+<script>
 
+    function move_post() {
+        if (document.getElementById("posted_comments").innerHTML == '...') {}
+
+        else {
+            need_to_move = document.getElementById("posted_comments").innerHTML
+            document.getElementById("old_comments").innerHTML = need_to_move }
+        }
+
+    function post() {
+            move_post()
+            comment = document.getElementById("comment").value
+            document.getElementById("posted_comments").innerHTML = (comment)
+
+        }
+
+
+    // else if (document.getElementById("posted_comments").innerHTML !== 'undefined') {
+    //
+    //     old_comment = document.getElementById("posted_comments").innerHTML
+    //     document.getElementById("old_comments").innerHTML = (old_comment)
+    //
+    // }
+
+    // This is code that works
+    //
+    // function post() {
+    //     comment = document.getElementById("comment").value
+    //     document.getElementById("posted_comments").innerHTML = (comment)
+    // }
+
+</script>
 
 
 
 <style>
+
 h1 {
 font-size: 40px;
 text-align: center;
@@ -50,6 +97,7 @@ font-size: 22px;
 .vids {
   text-align: center;
   background-color: #688868;
+  border-style: solid;
 }
 
 
