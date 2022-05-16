@@ -6,14 +6,26 @@
 </head>
 <body>
 
+<a id="hawk" href="awards.html"> <img src="https://grizzlax.team/wp-content/uploads/2019/03/del_norte_nighthawks.png" style="height:200px;width:200px;  float:left; padding-right:40px  ">
+</a>
 
 <h1> Recent Highlights </h1>
 
-
+<br> <br> <br>
+<br> <br> <br>
 <div class="vids">
 
   <p> Videos will go here </p>
-  <embed src="" type="  ">
+  <embed id="current_vid" src="https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=
+  1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent" >
+
+    <div class="options">
+        <button class="glow" id="troy" onClick="change_vid_Troy()" > Troy </button>
+        <button id="miles" onClick="change_vid_Miles()" > Miles </button>
+        <button id="Bob" onClick="change_vid_Bob()" > Bob </button>
+
+
+    </div>
 
 </div>
 
@@ -44,25 +56,33 @@
 
 
 
-
-
-
 <script>
+
+    // Censor certain word
 
     function move_post() {
         if (document.getElementById("posted_comments").innerHTML == '...') {}
 
         else {
             need_to_move = document.getElementById("posted_comments").innerHTML
-            document.getElementById("old_comments").innerHTML = need_to_move }
+            document.getElementById("old_comments").innerHTML = (need_to_move) }
         }
 
     function post() {
             move_post()
             comment = document.getElementById("comment").value
-            document.getElementById("posted_comments").innerHTML = (comment)
+            document.getElementById("posted_comments").innerHTML = ("user_name " + comment)
 
         }
+
+     function change_vid_Troy() {
+         document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent"
+     }
+
+    function change_vid_Miles() {
+        document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent"
+    }
+
 
 
     // else if (document.getElementById("posted_comments").innerHTML !== 'undefined') {
@@ -96,7 +116,7 @@ font-size: 22px;
 
 .vids {
   text-align: center;
-  background-color: #688868;
+    background-color: #99bfc0;
   border-style: solid;
 }
 
@@ -106,8 +126,36 @@ font-size: 22px;
 /*}*/
 
 body {
-  background-color: darkseagreen;
+    background-color: #c0dfe0;
 }
+
+#hawk {
+    height:50px;
+    width:50px;
+    position: fixed;
+    /*float: left;*/
+    padding:0px
+}
+
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    background-color: black;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0, 0 0 80px #c0dfe0;
+    }
+}
+
 
 </style>
 
