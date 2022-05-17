@@ -29,7 +29,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--gray);
+            background-color: #00356e;
             color: var(--white);
             font-size: 1vw;
         }
@@ -124,9 +124,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="container-fluid" style="background-image: url('/assets/blockimage3.png'); height: 100%; width: 100%;">
+    <div class="container-fluid" style="background-image: url('/static/assets/blockimage.png'); height: 100%; width: 100%;">
 
-    <div class="product" style="margin-top: 8%; padding-left: 5%;" >
+    <div class="product" style="margin-top: 0%; padding-left: 5%;" >
 
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
@@ -153,6 +153,11 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!--            <div class="col-4">-->
 <!--                <a href="{{'awards'}}" class="btn">Awards</a>-->
 <!--            </div>-->
+            <div class="col-md-5"><div style="font-size:25px; margin-top:110%;">
+                <a><p>
+                    Welcome to the Del Norte High School Boys Volleyball 2022 season. Coach Chris and his staff are excited to continue building one of the premier high school volleyball programs in Southern California.  Please check back here frequently for updates to both the practice and season schedules. Follow us on Instagram @dnhsboysvolleyball Go Nighthawks!
+                </p></a>
+            </div>
             {% endblock %}
         </div>
     </div>
