@@ -101,7 +101,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 <a class="dropdown-item" href="/Calendar">Calendar</a>
                             </div>
                         </li>
-                        </li>
+
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Databases
@@ -109,6 +110,15 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="nav-link" href={{ url_for('crud.crud') }}>SQL Crud </a>
                                 <a class="nav-link" href={{ url_for('crud.search') }}>SQL Search</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login/Logout
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href={{ url_for('crud.crud_login') }}>Login </a>
+                                <a class="nav-link" href={{ url_for('crud.logout') }}>Logout</a>
                             </div>
                         </li>
                         <div style="display: flex; align-items: center" onclick="showSearch()">
