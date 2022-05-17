@@ -56,6 +56,8 @@
 
 <!--</div>-->
 
+<br>
+
 <table>
     <tr>
         <td>
@@ -71,8 +73,8 @@
                 </div>
 
                 <div class="form_action--button">
-                    <input type="submit" value="Post">
-                    <input type="reset" value="Delete">
+                    <input class="comment_buttons" type="submit" value="Post">
+                    <input class="comment_buttons" type="reset" value="Delete">
                 </div>
             </form>
     </tr>
@@ -181,7 +183,7 @@
         cell2 = newRow.insertCell(1);
         cell2.innerHTML = data.comment2;
         cell4 = newRow.insertCell(2);
-        cell4.innerHTML = `<button class="comment_buttons" onClick="onEdit(this)">Edit</button> <button class="comment_buttons" onClick="onDelete(this)">Delete</button>`;
+        cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
     }
 
     //Edit the data
@@ -220,11 +222,6 @@
 h1 {
 font-size: 40px;
 text-align: center;
-}
-
-#comment_title {
-
-
 }
 
 p {
@@ -271,7 +268,7 @@ button {
 }
 
 .comment_buttons {
-    background-color: #c0dfe0;
+    background-color: #99bfc0;
     border-color: lightblue;
     border-bottom-style: groove;
     color: #010133;
@@ -290,24 +287,28 @@ button:hover {
 }
 
 
-
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
-    background-color: black;
+#userName, #comment2, {
+    font-size: 16px;
 }
 
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0;
-    }
 
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0, 0 0 80px #c0dfe0;
-    }
-}
+/*.glow {*/
+/*    font-size: 80px;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*    animation: glow 1s ease-in-out infinite alternate;*/
+/*    background-color: black;*/
+/*}*/
+
+/*@-webkit-keyframes glow {*/
+/*    from {*/
+/*        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0;*/
+/*    }*/
+
+/*    to {*/
+/*        text-shadow: 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0, 0 0 80px #c0dfe0;*/
+/*    }*/
+/*}*/
 
 
 </style>
