@@ -305,6 +305,9 @@ def fibonacci():
 def palindrome():
     return render_template("palindrome.html")
 
+@app.route("/Calendar")
+def calendar():
+    return render_template("Calendar.html")
 
 
 @app.route('/pokemongoapi', methods=['GET', 'POST'])
