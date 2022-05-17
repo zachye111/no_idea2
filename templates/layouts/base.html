@@ -29,7 +29,7 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--gray);
+            background-color: #00356e;
             color: var(--white);
             font-size: 1vw;
         }
@@ -39,6 +39,43 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             cursor:pointer;
             width:428px;
             height:158px;
+            transform: translateY(3px);
+            outline-style: none;
+        }
+
+        .hoverclick2{
+            background: url('../static/assets/instagrampic7.png') no-repeat;
+            cursor:pointer;
+            width:365px;
+            height:400px;
+            transform: translateY(3px);
+            outline-style: none;
+            margin-right: 100px;
+        }
+
+        .hoverclick3{
+            background: url('../static/assets/instagrampic6.png') no-repeat;
+            cursor:pointer;
+            width:372px;
+            height:660px;
+            transform: translateY(3px);
+            outline-style: none;
+        }
+
+        .hoverclick4{
+            background: url('../static/assets/instagrampic8.png') no-repeat;
+            cursor:pointer;
+            width:360px;
+            height:430px;
+            transform: translateY(3px);
+            outline-style: none;
+        }
+
+        .hoverclick5{
+            background: url('../static/assets/instagrampic9.png') no-repeat;
+            cursor:pointer;
+            width:380px;
+            height:570px;
             transform: translateY(3px);
             outline-style: none;
         }
@@ -124,9 +161,9 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 {% include "layouts/navbar.html" %}
 
 {% block body %}
-    <div class="container-fluid" style="background-image: url('/assets/blockimage3.png'); height: 100%; width: 100%;">
+    <div class="container-fluid" style="background-image: url('/static/assets/blockimage.png'); height: 100%; width: 100%;">
 
-    <div class="product" style="margin-top: 8%; padding-left: 5%;" >
+    <div class="product" style="margin-top: 0%; padding-left: 5%;" >
 
         <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
 
@@ -153,6 +190,23 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 <!--            <div class="col-4">-->
 <!--                <a href="{{'awards'}}" class="btn">Awards</a>-->
 <!--            </div>-->
+            <div class="col-md-5"><div style="font-size:25px; margin-top:120%; text-align: center;">
+                <a><p>
+                    Welcome to the Del Norte High School Boys Volleyball 2022 season. Coach Chris and his staff are excited to continue building one of the premier high school volleyball programs in Southern California.  Please check back here frequently for updates to both the practice and season schedules. Follow us on Instagram @dnhsboysvolleyball Go Nighthawks!
+                </p></a>
+            </div>
+                <div class="col-8" style="font-size: 20pt" >
+                    <input type="button" id="mature1" class="fa hoverclick2" onclick="location.href = 'https://www.instagram.com/p/CdSTTlbuoCR/';" style= "margin-top:10%">
+                </div>
+                <div class="col-8" style="font-size: 20pt" >
+                    <input type="button" id="mature1" class="fa hoverclick3" onclick="location.href = 'https://www.instagram.com/p/Cdn_NXJL3dN/';" style= "margin-top:10%">
+                </div>
+                <div class="col-8" style="font-size: 20pt" >
+                    <input type="button" id="mature1" class="fa hoverclick4" onclick="location.href = 'https://www.instagram.com/p/CdNH1_dOO2M/';" style= "margin-top:10%">
+                </div>
+                <div class="col-8" style="font-size: 20pt" >
+                    <input type="button" id="mature1" class="fa hoverclick5" onclick="location.href = 'https://www.instagram.com/p/CdGu-ECP0W4/';" style= "margin-top:10%">
+                </div>
             {% endblock %}
         </div>
     </div>
