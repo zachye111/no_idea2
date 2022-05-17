@@ -15,14 +15,16 @@
 <br> <br> <br>
 <div class="vids">
 
-  <p> Videos will go here </p>
-  <embed id="current_vid" src="https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=
-  1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent" >
+    <iframe id="current_vid" width="712" height="402" src="https://www.youtube.com/embed/ik2ofJiTMVU" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 
     <div class="options">
-        <button class="glow" id="troy" onClick="change_vid_Troy()" > Troy </button>
-        <button id="miles" onClick="change_vid_Miles()" > Miles </button>
-        <button id="Bob" onClick="change_vid_Bob()" > Bob </button>
+        <button id="troy" onClick="change_vid_Hype()" > Hype Real </button>
+        <button id="WestView" onClick="change_vid_WV()" > v. WestView </button>
+        <button id="Bob" onClick="change_vid_Carlsbad()" > v. Carlsbad </button>
 
 
     </div>
@@ -32,7 +34,7 @@
 <br>
 
 <tr>
-    <td><textarea rows = "5" cols = "100%" name = "comment" id="comment" required></textarea></td>
+    <td><textarea placeholder="Leave your Comments here" rows = "5" cols = "100%" name = "comment" id="comment" required></textarea></td>
     <td><input onclick="post()" type="submit" value="post" ></td>
 </tr>
 
@@ -40,7 +42,7 @@
 
 <div id="comment_section">
 
-    <h3>Comments</h3>
+    <p id="comment_title">Comments</p>
     <br>
 
 
@@ -75,13 +77,18 @@
 
         }
 
-     function change_vid_Troy() {
-         document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent"
+     function change_vid_Hype() {
+         document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU"
      }
 
-    function change_vid_Miles() {
-        document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=en&autohide=2&wmode=transparent"
+    function change_vid_WV() {
+        document.getElementById("current_vid").src = "https://www.youtube.com/embed/PfVaQKiWy1Y"
     }
+
+    function change_vid_Carlsbad() {
+        document.getElementById("current_vid").src = "https://www.youtube.com/embed/VniEAfBzfKI"
+    }
+
 
 
 
@@ -110,6 +117,11 @@ font-size: 40px;
 text-align: center;
 }
 
+#comment_title {
+
+
+}
+
 p {
 font-size: 22px;
 }
@@ -117,7 +129,7 @@ font-size: 22px;
 .vids {
   text-align: center;
     background-color: #99bfc0;
-  border-style: solid;
+  /*border-style: solid;*/
 }
 
 
@@ -132,10 +144,33 @@ body {
 #hawk {
     height:50px;
     width:50px;
-    position: fixed;
+    position: absolute;
+    /*position: fixed;*/
     /*float: left;*/
     padding:0px
 }
+
+button {
+    background-color: #c0dfe0;
+    border-color: lightblue;
+    border-bottom-style: groove;
+    color: #010133;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    /*box-shadow: 10px 10px 5px 5px lightblue;*/
+    /*border-color: darkblue;*/
+    background-color: #c6e6e7; ;
+}
+
 
 
 .glow {
