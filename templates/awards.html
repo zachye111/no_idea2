@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-{% extends "layouts/base.html" %}
-{% set project = "Awards" %}
 <html lang="en">
-{% block body %}
 <head>
   <meta charset="UTF-8">
   <title>Awards</title>
 </head>
 <body>
 
+<a id="hawk" href="awards.html"> <img src="https://grizzlax.team/wp-content/uploads/2019/03/del_norte_nighthawks.png" style="height:200px;width:200px;  float:left; padding-right:40px  ">
+</a>
+
+<h1 > Award Showcase </h1>
+
+<br><br>
+<br><br>
+<br><br>
+
 <div class="major">
 
-  <h1> Award Showcase </h1>
+
 
   <p> Here is a list of the numerous accomplishments </p>
   <p> of our amazing boy's volleyball team</p>
 
+  <div id="present_here">
+    <p></p>
+  </div>
 
-  <!-- Make the color the same as the background-->
-  <p id="GFG_UP" style="font-size: 1px; color:#00356e; text-align: center">
-  </p>
 
-  <p id = "GFG_DOWN" style ="font-size: 48px;border-style: outset;width:500px;position: center; text-align: center">
-  </p>
-
+  <br><br>
   <!--Button-->
   <div style="position: center;
  ">
-    <button class="btn" id="button" onclick="GFG_Fun()">Awards</button>
+    <button class="btn" id="button" onclick="present()">Awards</button>
   </div>
 
 
 </div>
 
-<script>
-  var up = document.getElementById('GFG_UP');
-  var down = document.getElementById('GFG_DOWN');
 
-  var arr = ["2019 CIF Division 2 Champions","2021 CIF Division 1 Runner Up",
+
+<script>
+
+  function present() {
+    x = Math.floor(Math.random() * 7);
+    document.getElementById("present_here").innerHTML=(awards[x])
+
+  }
+
+  let awards = ["2019 CIF Division 2 Champions","2021 CIF Division 1 Runner Up",
     "NCAA National Champions 21 & 22 by a DNHS alumni",
     "Dylan McGee, High School Athlete of the Week for the week of March 7th, 2022",
     "Nick Everett – 2021 All-Palomar League Honorable Mention", "Dylan McGee 2021 All-Palomar League Honorable Mention",
     "Benny Herrick - 2021 All-Palomar League 2nd Team", "Myles Henderson – 2021 All-Palomar League 1st Team"
   ]
 
-  up.innerHTML = "Click on the button to check "
-          + "the type of element.<br><br>" + arr;
-
-  function GFG_Fun() {
-    down.innerHTML =
-            arr[Math.floor(Math.random() * arr.length)];
-  }
 </script>
 
 <style>
@@ -58,6 +61,7 @@
   h1 {
     font-size: 50px;
     text-align: center;
+    color: #01173a;
   }
 
   p {
@@ -66,22 +70,64 @@
 
   .major {
     text-align: center;
-    background-color: #00356e;
+    background-color: #99bfc0;
+    border-style: outset;
+    border-width: 5px;
   }
 
 
   body {
-    background-color: #00356e;
+    background-color: #c0dfe0;
+    background-color: #c0dfe0;
   }
 
   #button {
-    background-color: #ffffff;
+    background-color: whitesmoke;
     font-size: 20px;
   }
+
+  #hawk {
+    height:50px;
+    width:50px;
+    position: fixed;
+    /*float: left;*/
+    padding:0px
+  }
+
+  #present_here {
+    font-size: 50px ;
+    color: #01173a;
+    width: 400px;
+    border-style: outset;
+    position: relative;
+    left: 550px;
+    top: 10px;
+  }
+
+  .glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #c0dfe0, 0 0 40px #c0dfe0, 0 0 50px #c0dfe0, 0 0 60px #c0dfe0, 0 0 70px #c0dfe0, 0 0 80px #c0dfe0;
+    }
+  }
+
+
+
+  </style>
+
 
 
 </style>
 
 </body>
-{% endblock %}
 </html>
