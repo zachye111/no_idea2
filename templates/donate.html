@@ -98,7 +98,7 @@
                 <p id="comment_title">Comments</p>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="output">
 
             </tbody>
         </table>
@@ -118,6 +118,25 @@
 
 <script>
 
+    let swears = ["fuck", "shit"]
+
+    function censor_comment() {
+        if (document.getElementById("comment2").value.includes(swears.values) == true) {
+            document.getElementById("comment2").value = document.getElementById("comment2").value.replace("fuck", "****")
+            return document.getElementById("comment2").value
+        }
+    }
+
+    function censor_user() {
+        if (document.getElementById("userName").value.includes("Fuck") == true) {
+            document.getElementById("userName").value = "****"
+            return document.getElementById("userName").value
+        }
+    }
+
+
+
+
 
     amount_of_up_votes = 0
 
@@ -130,7 +149,7 @@
             return amount_of_up_votes
         }
         if (amount_of_up_votes == 1)  {
-            document.getElementById("up_vote").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAACYmJglJSVAQED5+fllZWU1NTWVlZVZWVnPz8/n5+eqqqr29vbT09N4eHigoKDY2Njq6upgYGC1tbXHx8eFhYVPT0/g4OAXFxetra1JSUlra2u6urqOjo7w8PAmJiYeHh4yMjJ9fX1zc3MNDQ2JiYkPNQLZAAAEoUlEQVR4nO3caXeiMBQGYHDDlUqVFvely///iWNudFohSijxXsl5n08j45G8A2RnggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMgojpOJdCEeJ31ZhErU8jNkHIU/vj3MuAyvLEbSBXJtGOZE0iVybaVz7d9nl5t1I10ktzIK9Z6oP3fTjvrQkS6TWxuVaX35lFDeWLJAzs2pAv3/ke7ZT8HyuEfX8O3/x5Qu4qtggZyjhB8/n6m62cqVxz26aC8/n8d0EeXK416ae/B2C9/qmuFVXXqyvn4wmy/OJ6SLehArj3vUAvZ+H/GtSaQ+zez3kZdc7dp0xYRDz3puI5VncHWIblN/xlC7YsJ3dSgVKo97k2LCll/dmi4Nnq4ObXLdnIZLiwmz4qEm26s4/atD9GjuRUrzADQ8DLOrY68+XcPusdClKQ43Gm1puITB1KO6tHswXMLgTR2cixTIuamx+0ItfiJSINeotS/ejx712j5pKFhYqFBH2zuJArlGg9/iAxf701iszMOkeX7U31i6pSjWKH11eCpQINd0NWOY3vZm8ESTFaGhQjkYOgFNpNecDDcj9bu/+Avk3M11NKpKj+zlca5v6pCSzY3Hs2ESc29GoV7pejm+aZM0oTdwvH0rUlV632L99L3Wbyro0PRXk3Z5wjA/K/B09PYL8+pLZhXwyddu9MC+3TX+5dwy4VPv2NBt/Y1eS7rt37ft6IRP3KDoYW+NeZgsuvdPJE/vRYjM96id3UH9BPvwI/3ulVpvM71OX3OSgn6EeXfYaGVbQ5BxvbPpDoObkts6VApYt6rP+BP2KwWsPdtLCdsuCm4tKgv127L26ajRHJR/zyF1xkM8vC3+uORrO5gn7Kkf4p3oUGfc3/1Gy9EjqOgGh3e7dPlzoRNGLnaR7GhFjrk5tEzoZESQ6X39zDM5dgldtNGZHnnVbVErs0xYp6umTc+P86r2L1XEljC71Mncm2zZEp76h22/79LgPKHKPhvHmVAvyvH2aJgTCvTZJBLmF/8fjTWhyF4N1oRUmRonWx+IMyEtbLBvBGdMmIk0h4wJh4fycz0CV8L4LZQYWARsCXvnTul3+VddY0q4GeiEAjv52Z7Djed3aXBZm2KvShkT6g2brfo/VBFje7j2PiGNnfg3hTEmpOqUf+2QLyG9JxW66cJXwZfwQ2IKI2BvDwXev+RKqFcsuMf3CkvCSUL1aPglseuLJeHx3O8W2UnDkbB7mdEXGFmwPYezUGQGQ2FKOKFOKfPaqMZVl1KnVOR9Gq6EY+8Tbimht61FcJ6oWdT9lb+wTFj3NLrbPSv/ont2CcPFV1RrZPcpNIUR2O82USn/PrY7b1IQ2apfIeHpLvvbTNmrvoJC72JUSngqZJq95o3uyeL5ZTZY5hJWTVgH97LamW3CTrWNtgZSu7vVufd3v6EHBuMgGdTJNxB7AVqd/WtwT3ROeBqn270VY7AWukOVjmUZ9T2WbGerTiWrwXqc8k+w/bIsD6c0+T8ps3u6BO+y+iz2snea/nJvcmebt9KE9yIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT8A9FJMbQM04+zAAAAAElFTkSuQmCC\"\n"
+            document.getElementById("up_vote").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAACYmJglJSVAQED5+fllZWU1NTWVlZVZWVnPz8/n5+eqqqr29vbT09N4eHigoKDY2Njq6upgYGC1tbXHx8eFhYVPT0/g4OAXFxetra1JSUlra2u6urqOjo7w8PAmJiYeHh4yMjJ9fX1zc3MNDQ2JiYkPNQLZAAAEoUlEQVR4nO3caXeiMBQGYHDDlUqVFvely///iWNudFohSijxXsl5n08j45G8A2RnggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMgojpOJdCEeJ31ZhErU8jNkHIU/vj3MuAyvLEbSBXJtGOZE0iVybaVz7d9nl5t1I10ktzIK9Z6oP3fTjvrQkS6TWxuVaX35lFDeWLJAzs2pAv3/ke7ZT8HyuEfX8O3/x5Qu4qtggZyjhB8/n6m62cqVxz26aC8/n8d0EeXK416ae/B2C9/qmuFVXXqyvn4wmy/OJ6SLehArj3vUAvZ+H/GtSaQ+zez3kZdc7dp0xYRDz3puI5VncHWIblN/xlC7YsJ3dSgVKo97k2LCll/dmi4Nnq4ObXLdnIZLiwmz4qEm26s4/atD9GjuRUrzADQ8DLOrY68+XcPusdClKQ43Gm1puITB1KO6tHswXMLgTR2cixTIuamx+0ItfiJSINeotS/ejx712j5pKFhYqFBH2zuJArlGg9/iAxf701iszMOkeX7U31i6pSjWKH11eCpQINd0NWOY3vZm8ESTFaGhQjkYOgFNpNecDDcj9bu/+Avk3M11NKpKj+zlca5v6pCSzY3Hs2ESc29GoV7pejm+aZM0oTdwvH0rUlV632L99L3Wbyro0PRXk3Z5wjA/K/B09PYL8+pLZhXwyddu9MC+3TX+5dwy4VPv2NBt/Y1eS7rt37ft6IRP3KDoYW+NeZgsuvdPJE/vRYjM96id3UH9BPvwI/3ulVpvM71OX3OSgn6EeXfYaGVbQ5BxvbPpDoObkts6VApYt6rP+BP2KwWsPdtLCdsuCm4tKgv127L26ajRHJR/zyF1xkM8vC3+uORrO5gn7Kkf4p3oUGfc3/1Gy9EjqOgGh3e7dPlzoRNGLnaR7GhFjrk5tEzoZESQ6X39zDM5dgldtNGZHnnVbVErs0xYp6umTc+P86r2L1XEljC71Mncm2zZEp76h22/79LgPKHKPhvHmVAvyvH2aJgTCvTZJBLmF/8fjTWhyF4N1oRUmRonWx+IMyEtbLBvBGdMmIk0h4wJh4fycz0CV8L4LZQYWARsCXvnTul3+VddY0q4GeiEAjv52Z7Djed3aXBZm2KvShkT6g2brfo/VBFje7j2PiGNnfg3hTEmpOqUf+2QLyG9JxW66cJXwZfwQ2IKI2BvDwXev+RKqFcsuMf3CkvCSUL1aPglseuLJeHx3O8W2UnDkbB7mdEXGFmwPYezUGQGQ2FKOKFOKfPaqMZVl1KnVOR9Gq6EY+8Tbimht61FcJ6oWdT9lb+wTFj3NLrbPSv/ont2CcPFV1RrZPcpNIUR2O82USn/PrY7b1IQ2apfIeHpLvvbTNmrvoJC72JUSngqZJq95o3uyeL5ZTZY5hJWTVgH97LamW3CTrWNtgZSu7vVufd3v6EHBuMgGdTJNxB7AVqd/WtwT3ROeBqn270VY7AWukOVjmUZ9T2WbGerTiWrwXqc8k+w/bIsD6c0+T8ps3u6BO+y+iz2snea/nJvcmebt9KE9yIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT8A9FJMbQM04+zAAAAAElFTkSuQmCC"
             amount_of_up_votes = 0
             document.getElementById("up_vote").innerHTML = amount_of_up_votes
             document.getElementById("likes").innerHTML = "Click to Like"
@@ -138,22 +157,21 @@
         }
     }
 
-    // Censor certain word
 
-    function move_post() {
-        if (document.getElementById("posted_comments").innerHTML == '...') {}
-
-        else {
-            need_to_move = document.getElementById("posted_comments").innerHTML
-            document.getElementById("old_comments").innerHTML = (need_to_move) }
-        }
-
-    function post() {
-            move_post()
-            comment = document.getElementById("comment").value
-            document.getElementById("posted_comments").innerHTML = ("user_name " + comment)
-
-        }
+    // function move_post() {
+    //     if (document.getElementById("posted_comments").innerHTML == '...') {}
+    //
+    //     else {
+    //         need_to_move = document.getElementById("posted_comments").innerHTML
+    //         document.getElementById("old_comments").innerHTML = (need_to_move) }
+    //     }
+    //
+    // function post() {
+    //         move_post()
+    //         comment = document.getElementById("comment").value
+    //         document.getElementById("posted_comments").innerHTML = ("user_name " + comment)
+    //
+    //     }
 
      function change_vid_Hype() {
          document.getElementById("current_vid").src = "https://www.youtube.com/embed/ik2ofJiTMVU"
@@ -202,7 +220,9 @@
     //Retrieve the data
     function readFormData() {
         var formData = {};
+        censor_user()
         formData["userName"] = document.getElementById("userName").value;
+        censor_comment()
         formData["comment2"] = document.getElementById("comment2").value;
         return formData;
     }
@@ -212,7 +232,8 @@
         var table = document.getElementById("storeList").getElementsByTagName('tbody')[0];
         var newRow = table.insertRow(table.length);
         cell1 = newRow.insertCell(0);
-        cell1.innerHTML = data.userName;
+        // here is where the output is
+        cell1.innerHTML =data.userName + ": ";
         cell2 = newRow.insertCell(1);
         cell2.innerHTML = data.comment2;
         cell4 = newRow.insertCell(2);
@@ -252,6 +273,10 @@
 
 
 <style>
+
+    #userName {
+        font-weight: bold;
+    }
 
 h1 {
 font-size: 40px;
