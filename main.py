@@ -6,7 +6,7 @@ import requests
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
 from __init__ import app
-
+from templates.api.webapi import joke_list
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
@@ -186,7 +186,7 @@ def jokes():
     url = "https://csp.nighthawkcodingsociety.com/api/jokes"
 
     response = requests.request("GET", url)
-    return render_template("jokes.html", jokes=response.json())
+    return render_template("jokes.html", jokes=response.json(),jokeslist=joke_list)
 
 @app.route('/covid19', methods=['GET', 'POST'])
 def covid19():
@@ -370,4 +370,4 @@ def movieapi():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8000)
+    app.run(debug=True,port=5000)
