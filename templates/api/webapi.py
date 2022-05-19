@@ -25,6 +25,38 @@ joke_list = [
     "Jayden Chen Fr. #17",
 ]
 
+joke_list2 = [
+    "Nematt Lalehzarian",
+    "Declan Cockrell",
+    "Brandon So",
+    "Will Bartelt",
+    "Chris Albertson",
+    "Ninaad Kiran",
+    "Grant Dennison",
+    "Paul Tassos",
+    "David Lee",
+    "Alex Traina",
+    "Riley Namin",
+    "Gabriel Pearl",
+    "Dylan Quan",
+]
+
+joke_list3 = [
+    "Rayhan Shamly",
+    "Ali Almahdawi",
+    "Noah Kim",
+    "Sean Choi",
+    "Beijan Moniza",
+    "Samarth Kalankr",
+    "Eric Kownacki",
+    "Rabi Mohammad",
+    "Joshua Thinh",
+    "Levi Stratton",
+    "Ryan Liao",
+    "Lucas Moore",
+    "Walid Alsaialy",
+    "Michael Chappius",
+]
 
 def _find_next_id():
     return max(jokes["id"] for joke in jokes) + 1
