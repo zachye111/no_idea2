@@ -119,6 +119,10 @@
 <script>
 
 
+    function censor_y_n() {
+
+    }
+
     let count = 0
 
     function waluigi() {
@@ -140,7 +144,7 @@
     // This for some reason breaks everything
     // import default long_swear_list from './swears.js'
 
-    let swears = ["fuck", "shit", "ass", "dick" ]
+    let swears = ["fuck", "shit", "ass", "dick", "dang", "shoot"]
 
     function censor_comment() {
         if (swears.includes(document.getElementById("comment2").value.toLowerCase()) == true) {
