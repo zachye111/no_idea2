@@ -168,6 +168,10 @@ def reviewPageGenshin():
 def reviewPageSmashBros():
     return render_template("reviewPageSmashBros.html")
 
+@app.route("/schedule")
+def schedule():
+    return render_template("schedule.html")
+
 @app.route('/joke', methods=['GET', 'POST'])
 def joke():
     """
