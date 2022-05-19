@@ -3,19 +3,12 @@ from flask import request
 from flask import render_template
 import json
 import requests
+from cruddy.app_crud import app_crud
+from cruddy.app_crud_api import app_crud_api
 from __init__ import app
-from crud2.crud_app import app_crud1
-from crud2.crud_app import app_crud1
-from aboutus import aboutus
-from crud2.app_crud_api import app_crud_api
-import math
-import os
-# create a Flask instance
-#app = Flask(__name__)
-# from recommendations import recommendation
 
-app.register_blueprint(app_crud1)
-app.register_blueprint(aboutus)
+app.register_blueprint(app_crud)
+app.register_blueprint(app_crud_api)
 
 
 # connects default URL to render index.html
@@ -305,9 +298,6 @@ def fibonacci():
 def palindrome():
     return render_template("palindrome.html")
 
-@app.route("/Calendar")
-def calendar():
-    return render_template("Calendar.html")
 
 
 @app.route('/pokemongoapi', methods=['GET', 'POST'])
