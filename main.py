@@ -7,6 +7,8 @@ from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
 from __init__ import app
 from templates.api.webapi import joke_list
+from templates.api.webapi import joke_list2
+from templates.api.webapi import joke_list3
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
@@ -187,6 +189,28 @@ def jokes():
 
     response = requests.request("GET", url)
     return render_template("jokes.html", jokes=response.json(),jokeslist=joke_list)
+
+@app.route('/jokes2', methods=['GET', 'POST'])
+def jokes2():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/jokes"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/jokes"
+
+    response = requests.request("GET", url)
+    return render_template("jokes2.html", jokes=response.json(),jokeslist2=joke_list2)
+
+@app.route('/jokes3', methods=['GET', 'POST'])
+def jokes3():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/jokes"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/jokes"
+
+    response = requests.request("GET", url)
+    return render_template("jokes3.html", jokes=response.json(),jokeslist3=joke_list3)
 
 @app.route('/covid19', methods=['GET', 'POST'])
 def covid19():
