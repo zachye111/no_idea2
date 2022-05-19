@@ -298,9 +298,6 @@ def fibonacci():
 def palindrome():
     return render_template("palindrome.html")
 
-@app.route("/Calendar")
-def calendar():
-    return render_template("Calendar.html")
 
 
 @app.route('/pokemongoapi', methods=['GET', 'POST'])
@@ -373,4 +370,4 @@ def movieapi():
 
 # runs the application on the development server
 if __name__ == "__main__":
-    app.run(debug=True,port=8080)
+    app.run(debug=True,port=8000)

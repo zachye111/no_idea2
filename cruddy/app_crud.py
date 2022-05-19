@@ -26,6 +26,7 @@ def crud():
     return render_template("crud.html", table=users_all())
 
 
+
 # Flask-Login directs unauthorised users to this unauthorized_handler
 @login_manager.unauthorized_handler
 def unauthorized():
@@ -40,8 +41,8 @@ def crud_login():
     if request.form:
         email = request.form.get("email")
         password = request.form.get("password")
-        if login(email, password):       # zero index [0] used as email is a tuple
-            return redirect(url_for('crud.crud'))
+        if login(email, password):  # zero index [0] used as email is a tuple
+            return redirect(url_for('index'))
 
     # if not logged in, show the login page
     return render_template("login.html")
@@ -55,8 +56,8 @@ def crud_authorize():
         user_name = request.form.get("user_name")
         email = request.form.get("email")
         password1 = request.form.get("password1")
-        password2 = request.form.get("password1")           # password should be verified
-        if authorize(user_name, email, password1):    # zero index [0] used as user_name and email are type tuple
+        password2 = request.form.get("password1")  # password should be verified
+        if authorize(user_name, email, password1):  # zero index [0] used as user_name and email are type tuple
             return redirect(url_for('crud.crud_login'))
     # show the auth user page if the above fails for some reason
     return render_template("authorize.html")
@@ -130,3 +131,17 @@ def search_term():
     term = req['term']
     response = make_response(jsonify(users_ilike(term)), 200)
     return response
+
+
+@app_crud.route('/Calendar/')
+@login_required
+def calendar():
+    """obtains all Users from table and loads Admin Form"""
+    return render_template("Calendar.html")
+
+
+@app_crud.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
