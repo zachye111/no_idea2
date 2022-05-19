@@ -7,23 +7,23 @@
         <span class="fs-4">All Jokes</span>
     </header>
 
+    <div>
+        <a> <img class="col-md-12" style="width:600px;margin-right:-15%" src="../static/assets/varsityroster.png"></a>
+    </div>
+
+    <p>{{jokeslist}}</p>
+
     <div class="row mx-3 bg-primary text-light rounded-3">
         <div class="col-md mx-3 py-5">
             {% for joke in jokes %}
-            <p class="setup"><strong>{{joke.id}}. {{joke.joke}}</strong></p>
+            <p class="setup"><strong></strong></p>
             {% endfor %}
         </div>
     </div>
-    <p>{{jokeslist}}</p>
     <table class="table">
         <thead>
         <tr>
-            <th>JSON Data</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>{{jokes}}</td>
+
         </tr>
         </tbody>
     </table>
