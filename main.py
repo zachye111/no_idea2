@@ -9,6 +9,7 @@ from __init__ import app
 from templates.api.webapi import joke_list
 from templates.api.webapi import joke_list2
 from templates.api.webapi import joke_list3
+from templates.api.webapi import joke_list4
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 
@@ -168,9 +169,16 @@ def reviewPageGenshin():
 def reviewPageSmashBros():
     return render_template("reviewPageSmashBros.html")
 
-@app.route("/schedule")
+@app.route('/schedule', methods=['GET', 'POST'])
 def schedule():
-    return render_template("schedule.html")
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/jokes"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/jokes"
+
+    response = requests.request("GET", url)
+    return render_template("schedule.html", jokes=response.json(),jokeslist4=joke_list4)
 
 @app.route('/joke', methods=['GET', 'POST'])
 def joke():
