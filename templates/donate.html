@@ -144,21 +144,37 @@
     // This for some reason breaks everything
     // import default long_swear_list from './swears.js'
 
-    let swears = ["fuck", "shit", "ass", "dick", "dang", "shoot"]
+    let swears = ["dang", "shoot", "darn"]
+
+    // Outdated Comment Censor
+    // function censor_comment() {
+    //     if (swears.includes(document.getElementById("comment2").value.toLowerCase()) == true) {
+    //         document.getElementById("comment2").value = "****"
+    //         return document.getElementById("comment2").value
+    //     }
+    // }
 
     function censor_comment() {
-        if (swears.includes(document.getElementById("comment2").value.toLowerCase()) == true) {
+        if (document.getElementById("comment2").value.search(swears.value) > -1) {
             document.getElementById("comment2").value = "****"
             return document.getElementById("comment2").value
         }
     }
 
     function censor_user() {
-        if (swears.includes(document.getElementById("userName").value.toLowerCase()) == true) {
+        if (document.getElementById("userName").value.search(swears.value) > -1) {
             document.getElementById("userName").value = "****"
             return document.getElementById("userName").value
         }
     }
+
+    // Old version of Username Censor
+    // function censor_user() {
+    //     if (swears.includes(document.getElementById("userName").value.toLowerCase()) == true) {
+    //         document.getElementById("userName").value = "****"
+    //         return document.getElementById("userName").value
+    //     }
+    // }
 
 
 
@@ -246,6 +262,7 @@
     //Retrieve the data
     function readFormData() {
         var formData = {};
+        // here is censor
         censor_user()
         formData["userName"] = document.getElementById("userName").value;
         censor_comment()
