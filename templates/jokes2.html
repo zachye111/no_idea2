@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+  <div>
+    <p style="font-size:100px; margin-left:35%;">
+      JV Roster
+    </p>
+  </div>
+
+  <div>
+    <a> <img class="col-md-12" style="width:600px;margin-left:28%" src="../static/assets/JVroster.png"></a>
+  </div>
+
+  <p>{{jokeslist2}}</p>
+
+      {% for joke in jokes %}
+      <p class="setup"><strong></strong></p>
+      {% endfor %}
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
