@@ -146,35 +146,34 @@
 
     let swears = ["dang", "shoot", "darn"]
 
-    // Outdated Comment Censor
-    // function censor_comment() {
-    //     if (swears.includes(document.getElementById("comment2").value.toLowerCase()) == true) {
-    //         document.getElementById("comment2").value = "****"
-    //         return document.getElementById("comment2").value
-    //     }
-    // }
-
     function censor_comment() {
-        if (document.getElementById("comment2").value.search(swears.value) > -1) {
+        if (swears.includes(document.getElementById("comment2").value.toLowerCase()) == true) {
             document.getElementById("comment2").value = "****"
             return document.getElementById("comment2").value
         }
     }
 
+    // censors everything for some reason
+    // function censor_comment() {
+    //     if (document.getElementById("comment2").value.search(swears) > 0) {
+    //         document.getElementById("comment2").value = "****"
+    //         return document.getElementById("comment2").value
+    //     }
+    // }
+
     function censor_user() {
-        if (document.getElementById("userName").value.search(swears.value) > -1) {
+        if (swears.includes(document.getElementById("userName").value.toLowerCase()) == true) {
             document.getElementById("userName").value = "****"
             return document.getElementById("userName").value
         }
     }
 
-    // Old version of Username Censor
     // function censor_user() {
-    //     if (swears.includes(document.getElementById("userName").value.toLowerCase()) == true) {
-    //         document.getElementById("userName").value = "****"
-    //         return document.getElementById("userName").value
+    //         if (document.getElementById("userName").value.search(swears.value) > -1) {
+    //             document.getElementById("userName").value = "****"
+    //             return document.getElementById("userName").value
+    //         }
     //     }
-    // }
 
 
 
