@@ -28,41 +28,6 @@
     <!-- Slideshow container -->
     <div class="slideshow-container" style="text-align: center"  >
 
-        <div style="float:right; background-color: whitesmoke;style;border-radius: 25px; position:absolute;left:1200px">
-            <h3>Pleasant Comments</h3>
-
-            <table id="pleasant_comments" style="width:100%; line-break:e">
-                <tr>
-<!--                    <th>User</th>-->
-<!--                    <th>Comment</th>-->
-                </tr>
-                <tr>
-                    <td class="pleasant_commenter1">iLove_VolleyBall</td>
-                    <td id="pleasant_comment1">Dang that Spike was sick!!</td>
-                </tr>
-                <tr></tr>
-                <tr>
-                    <td class="pleasant_commenter2">thatNetAin'tNothing</td>
-                    <td id="pleasant_comment2">Man i love volleyball</td>
-                </tr>
-                    <td class="pleasant_commenter3">NightHawk-SuperFan</td>
-                    <td id="pleasant_comment3">Those guys are flying, way to soar high nighthawks</td>
-                </tr>
-                <td class="pleasant_commenter4">Sun_Devils_Drool</td>
-                <td id="pleasant_comment4">nice</td>
-                </tr>
-                <td class="pleasant_commenter5">Titans-Suck</td>
-                <td id="pleasant_comment5">titans have nothing on These NIGHTHAWKS!!</td>
-                </tr>
-                <td class="pleasant_commenter6">goGoGO!!</td>
-                <td id="pleasant_comment6">whoooooo!!!, go team!!</td>
-                </tr>
-                <td class="pleasant_commenter7">Spike_Master_1989</td>
-                <td id="pleasant_comment7">back in my day I these guys would have had nothing on me</td>
-            </table>
-
-        </div>
-
         <!-- Full-width images with number and caption text -->
         <div id="pic1" class="mySlides fade">
             <div class="numbertext">1 / 3</div>
@@ -88,6 +53,46 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
+    <div style="float:outside; background-color: whitesmoke;style;border-radius: 25px; position:absolute;left:1200px">
+        <h3>Pleasant Comments</h3>
+
+        <table id="pleasant_comments" style="width:100%; line-break:e">
+            <tr>
+                <!--                    <th>User</th>-->
+                <!--                    <th>Comment</th>-->
+            </tr>
+            <tr>
+                <td id="pleasant_commenter1">iLove_VolleyBall</td>
+                <td id="pleasant_comment1">Dang that Spike was sick!!</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter2">thatNetAin'tNothing</td>
+                <td id="pleasant_comment2">Man i love volleyball</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter3">NightHawk-SuperFan</td>
+                <td id="pleasant_comment3">Those guys are flying, way to soar high nighthawks</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter4">Sun_Devils_Drool</td>
+                <td id="pleasant_comment4">nice</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter5">Titans-Suck</td>
+                <td id="pleasant_comment5">titans have nothing on These NIGHTHAWKS!!</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter6">goGoGO!!</td>
+                <td id="pleasant_comment6">whoooooo!!!, go team!!</td>
+            </tr>
+            <tr>
+                <td id="pleasant_commenter7">Spike_Master_1989</td>
+                <td id="pleasant_comment7">back in my day I these guys would have had nothing on me</td>
+            </tr>
+        </table>
+
+    </div>
+
 
 </div>
 
@@ -97,7 +102,7 @@
 
 <button onClick = "black_and_white()">Grey</button>
 <button onClick = "in_color()">In Color</button>
-<button onClick = "setInterval(scroll_comment(), 1000)">Scroll</button>
+<button onClick = real_scroll()>Scroll</button>
 
 <script>
 
@@ -146,25 +151,35 @@
 
     // This is what scrolls the pleasant comments
 
-    potential_comments = ["Dang that Spike was sick!!","Man i love volleyball","Those guys are flying," +
-    " way to soar high nighthawks", "nice", "titans have nothing on These NIGHTHAWKS!!",
-    "whoooooo!!!, go team!!", "back in my day I these guys would have had nothing on me"]
+    potential_comments = ["butts","Dang that Spike was sick!!","Man i love volleyball","Those guys are flying",
+    "way to soar high nighthawks", "nice", "titans have nothing on These NIGHTHAWKS!!",
+    "whoooooo!!!", "go team!!", "back in my day these guys would have had nothing on me"]
 
-    random_comment = 1
-    function scroll_comment() {
-        random_comment = Math.floor(Math.random() * 7);
-        document.getElementById("pleasant_comment1").innerHTML=
-
-        document.getElementById("pleasant_comment7").innerHTML = document.getElementById("pleasant_comment6").innerHTML
-        document.getElementById("pleasant_comment6").innerHTML = document.getElementById("pleasant_comment5").innerHTML
-        document.getElementById("pleasant_comment5").innerHTML = document.getElementById("pleasant_comment4").innerHTML
-        document.getElementById("pleasant_comment4").innerHTML = document.getElementById("pleasant_comment3").innerHTML
-        document.getElementById("pleasant_comment3").innerHTML = document.getElementById("pleasant_comment2").innerHTML
-        document.getElementById("pleasant_comment2").innerHTML = document.getElementById("pleasant_comment1").innerHTML
-
+    function real_scroll() {
+        setInterval(scroll_comment, 1000)
     }
 
-    setInterval(scroll_comment(), 999)
+    function scroll_comment() {
+            let random_comment = Math.floor(Math.random() * 8);
+            // document.getElementById("pleasant_comment1").innerHTML = potential_comments[random_comment]
+
+            document.getElementById("pleasant_comment7").innerHTML = document.getElementById("pleasant_comment6").innerHTML
+            document.getElementById("pleasant_commenter7").innerHTML = document.getElementById("pleasant_commenter6").innerHTML
+            document.getElementById("pleasant_comment6").innerHTML = document.getElementById("pleasant_comment5").innerHTML
+            document.getElementById("pleasant_commenter6").innerHTML = document.getElementById("pleasant_commenter5").innerHTML
+            document.getElementById("pleasant_comment5").innerHTML = document.getElementById("pleasant_comment4").innerHTML
+            document.getElementById("pleasant_commenter5").innerHTML = document.getElementById("pleasant_commenter4").innerHTML
+            document.getElementById("pleasant_comment4").innerHTML = document.getElementById("pleasant_comment3").innerHTML
+            document.getElementById("pleasant_commenter4").innerHTML = document.getElementById("pleasant_commenter3").innerHTML
+            document.getElementById("pleasant_comment3").innerHTML = document.getElementById("pleasant_comment2").innerHTML
+            document.getElementById("pleasant_commenter3").innerHTML = document.getElementById("pleasant_commenter2").innerHTML
+            document.getElementById("pleasant_comment2").innerHTML = document.getElementById("pleasant_comment1").innerHTML
+            document.getElementById("pleasant_commenter2").innerHTML = document.getElementById("pleasant_commenter1").innerHTML
+            document.getElementById("pleasant_comment1").innerHTML = document.getElementById("pleasant_comment7").innerHTML
+            document.getElementById("pleasant_commenter1").innerHTML = document.getElementById("pleasant_commenter7").innerHTML
+    }
+
+    // setInterval(scroll_comment(), 999)
 
 
 
@@ -218,32 +233,32 @@
 <style>
 
 
-    .pleasant_commenter1 {
+    #pleasant_commenter1 {
         --c_color: blue;
         color: var(--c_color)
     }
 
-    .pleasant_commenter2 {
+    #pleasant_commenter2 {
         color: red
     }
 
-    .pleasant_commenter3 {
+    #pleasant_commenter3 {
         color: green
     }
 
-    .pleasant_commenter4 {
+    #pleasant_commenter4 {
         color: purple
     }
 
-    .pleasant_commenter5 {
+    #pleasant_commenter5 {
         color: forestgreen;
     }
 
-    .pleasant_commenter6 {
+    #pleasant_commenter6 {
         color: #5418af;
     }
 
-    .pleasant_commenter7 {
+    #pleasant_commenter7 {
         color: red;
     }
 
