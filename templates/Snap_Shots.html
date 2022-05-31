@@ -23,27 +23,65 @@
 <!--    <p > Here is a slide show of some great photos of our team</p>-->
 <!--    <p > hope you enjoy!!</p>-->
 
+
+
     <!-- Slideshow container -->
-    <div class="slideshow-container" style="text-align: center" >
+    <div class="slideshow-container" style="text-align: center"  >
+
+        <div style="float:right; background-color: whitesmoke;style;border-radius: 25px; position:absolute;left:1200px">
+            <h3>Pleasant Comments</h3>
+
+            <table id="pleasant_comments" style="width:100%; line-break:e">
+                <tr>
+<!--                    <th>User</th>-->
+<!--                    <th>Comment</th>-->
+                </tr>
+                <tr>
+                    <td class="pleasant_commenter1">iLove_VolleyBall</td>
+                    <td id="pleasant_comment1">Dang that Spike was sick!!</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="pleasant_commenter2">thatNetAin'tNothing</td>
+                    <td id="pleasant_comment2">Man i love volleyball</td>
+                </tr>
+                    <td class="pleasant_commenter3">NightHawk-SuperFan</td>
+                    <td id="pleasant_comment3">Those guys are flying, way to soar high nighthawks</td>
+                </tr>
+                <td class="pleasant_commenter4">Sun_Devils_Drool</td>
+                <td id="pleasant_comment4">nice</td>
+                </tr>
+                <td class="pleasant_commenter5">Titans-Suck</td>
+                <td id="pleasant_comment5">titans have nothing on These NIGHTHAWKS!!</td>
+                </tr>
+                <td class="pleasant_commenter6">goGoGO!!</td>
+                <td id="pleasant_comment6">whoooooo!!!, go team!!</td>
+                </tr>
+                <td class="pleasant_commenter7">Spike_Master_1989</td>
+                <td id="pleasant_comment7">back in my day I these guys would have had nothing on me</td>
+            </table>
+
+        </div>
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
+        <div id="pic1" class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="https://dnhsboysvolleyball.files.wordpress.com/2022/05/img_1893.jpg" style="width:55%">
+            <img id="volley_ball_pic1" src="https://dnhsboysvolleyball.files.wordpress.com/2022/05/img_1893.jpg" style="width:35%">
             <div class="text">Soar High Nighthawks!!</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="https://dnhsboysvolleyball.files.wordpress.com/2022/03/website-header-1.jpg" style="width:45%">
+            <img id="volley_ball_pic2" src="https://dnhsboysvolleyball.files.wordpress.com/2022/03/website-header-1.jpg" style="width:45%">
             <div class="text">Our Team</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="https://dnhsboysvolleyball.files.wordpress.com/2022/05/img_1656.jpg" style="width:35%">
+            <img id="volley_ball_pic3" src="https://dnhsboysvolleyball.files.wordpress.com/2022/05/img_1656.jpg" style="width:35%">
             <div class="text">One Flock</div>
         </div>
+
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -53,10 +91,29 @@
 
 </div>
 
+
+
 <!--<div class="bottom"></div>-->
 
+<button onClick = "black_and_white()">Grey</button>
+<button onClick = "in_color()">In Color</button>
+<button onClick = "setInterval(scroll_comment(), 1000)">Scroll</button>
 
 <script>
+
+    function black_and_white() {
+        document.getElementById("volley_ball_pic1").id = "grey"
+        document.getElementById("volley_ball_pic2").id = "grey"
+        document.getElementById("volley_ball_pic3").id = "grey"
+    }
+
+    function in_color() {
+        document.getElementById("volley_ball_pic1").id = "contrast"
+        document.getElementById("volley_ball_pic2").id = "contrast"
+        document.getElementById("volley_ball_pic3").id = "contrast"
+    }
+
+
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -87,12 +144,133 @@
     }
 
 
+    // This is what scrolls the pleasant comments
+
+    potential_comments = ["Dang that Spike was sick!!","Man i love volleyball","Those guys are flying," +
+    " way to soar high nighthawks", "nice", "titans have nothing on These NIGHTHAWKS!!",
+    "whoooooo!!!, go team!!", "back in my day I these guys would have had nothing on me"]
+
+    random_comment = 1
+    function scroll_comment() {
+        random_comment = Math.floor(Math.random() * 7);
+        document.getElementById("pleasant_comment1").innerHTML=
+
+        document.getElementById("pleasant_comment7").innerHTML = document.getElementById("pleasant_comment6").innerHTML
+        document.getElementById("pleasant_comment6").innerHTML = document.getElementById("pleasant_comment5").innerHTML
+        document.getElementById("pleasant_comment5").innerHTML = document.getElementById("pleasant_comment4").innerHTML
+        document.getElementById("pleasant_comment4").innerHTML = document.getElementById("pleasant_comment3").innerHTML
+        document.getElementById("pleasant_comment3").innerHTML = document.getElementById("pleasant_comment2").innerHTML
+        document.getElementById("pleasant_comment2").innerHTML = document.getElementById("pleasant_comment1").innerHTML
+
+    }
+
+    setInterval(scroll_comment(), 999)
+
+
+
+    // comment1 = ["Dang that Spike was sick!!","Man i love volleyball","Those guys are flying, way to soar high nighthawks"]
+    //
+    // function pick_comment() {
+    //     let text_choice = Math.floor(Math.random() * 3);
+    //
+    //     if (text_choice == 0) {
+    //         document.getElementById("pleasant_comment1").innerHTML= "Dang that Spike was sick!!"
+    //     }
+    //     if (text_choice == 1) {
+    //         document.getElementById("pleasant_comment1").innerHTML= "Man i love volleyball"
+    //     }
+    //     if (text_choice == 2) {
+    //         document.getElementById("pleasant_comment1").innerHTML= "Those guys are flying, way to soar high nighthawks"
+    //     }
+    //
+    //
+    //     if (text_choice == 0) {
+    //         document.getElementById("pleasant_comment2").innerHTML= "Dang that Spike was sick!!"
+    //     }
+    //     if (text_choice == 1) {
+    //         document.getElementById("pleasant_comment2").innerHTML= "Man i love volleyball"
+    //     }
+    //     if (text_choice == 2) {
+    //         document.getElementById("pleasant_comment2").innerHTML= "Those guys are flying, way to soar high nighthawks"
+    //     }
+    //
+    //
+    //     if (text_choice == 0) {
+    //         document.getElementById("pleasant_comment3").innerHTML= "Dang that Spike was sick!!"
+    //     }
+    //     if (text_choice == 1) {
+    //         document.getElementById("pleasant_comment3").innerHTML= "Man i love volleyball"
+    //     }
+    //     if (text_choice == 2) {
+    //         document.getElementById("pleasant_comment3").innerHTML= "Those guys are flying, way to soar high nighthawks"
+    //     }
+    //
+    // }
+    //
+    //
+    // add_pleasant_comment()
+
 
 </script>
 
 
 
 <style>
+
+
+    .pleasant_commenter1 {
+        --c_color: blue;
+        color: var(--c_color)
+    }
+
+    .pleasant_commenter2 {
+        color: red
+    }
+
+    .pleasant_commenter3 {
+        color: green
+    }
+
+    .pleasant_commenter4 {
+        color: purple
+    }
+
+    .pleasant_commenter5 {
+        color: forestgreen;
+    }
+
+    .pleasant_commenter6 {
+        color: #5418af;
+    }
+
+    .pleasant_commenter7 {
+        color: red;
+    }
+
+
+
+    #grey {
+        filter: grayscale(100%);
+    }
+
+    #contrast {
+        filter: none;
+    }
+
+    button {
+        background-color: #c0dfe0;
+        border-color: lightblue;
+        border-bottom-style: groove;
+        color: #010133;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
 
     h1 {
         font-size: 50px;
@@ -128,7 +306,14 @@
         position: absolute;
         /*position: fixed;*/
         /*float: left;*/
-        padding:0px
+        padding:0px;
+        animation-name: hawk_spin;
+        animation-duration: 2s;
+    }
+
+    @keyframes hawk_spin {
+        from {transform: rotateY(180deg);}
+        to {transform: rotateY(-360deg);}
     }
 
     .center {
