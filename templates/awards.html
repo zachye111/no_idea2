@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -61,7 +64,7 @@
   h1 {
     font-size: 50px;
     text-align: center;
-    color: #01173a;
+    color: #ffffff;
   }
 
   p {
@@ -70,15 +73,15 @@
 
   .major {
     text-align: center;
-    background-color: #99bfc0;
+    background-color: #00356e;
     border-style: outset;
     border-width: 5px;
   }
 
 
   body {
-    background-color: #c0dfe0;
-    background-color: #c0dfe0;
+    background-color: #00356e;
+    background-color: #00356e;
   }
 
   #button {
@@ -96,7 +99,7 @@
 
   #present_here {
     font-size: 50px ;
-    color: #01173a;
+    color: #ffffff;
     width: 400px;
     border-style: outset;
     position: relative;
@@ -130,4 +133,5 @@
 </style>
 
 </body>
+{% endblock %}
 </html>

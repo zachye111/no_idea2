@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Donate</title>
+    <title>Highlights</title>
 </head>
 <body>
 
@@ -331,7 +334,7 @@ font-size: 22px;
 
 .vids {
   text-align: center;
-    background-color: #99bfc0;
+    background-color: #00356e;
   /*border-style: solid;*/
 }
 
@@ -341,7 +344,7 @@ font-size: 22px;
 /*}*/
 
 body {
-    background-color: #c0dfe0;
+    background-color: #00356e;
 }
 
 #hawk {
@@ -354,10 +357,10 @@ body {
 }
 
 button {
-    background-color: #c0dfe0;
-    border-color: lightblue;
+    background-color: #ffffff;
+    border-color: #00356e;
     border-bottom-style: groove;
-    color: #010133;
+    color: #00356e;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -369,10 +372,10 @@ button {
 }
 
 .comment_buttons {
-    background-color: #99bfc0;
-    border-color: lightblue;
+    background-color: #00356e;
+    border-color: #00356e;
     border-bottom-style: groove;
-    color: #010133;
+    color: #00356e;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -384,7 +387,7 @@ button {
 button:hover {
     /*box-shadow: 10px 10px 5px 5px lightblue;*/
     /*border-color: darkblue;*/
-    background-color: #c6e6e7; ;
+    background-color: #00356e; ;
 }
 
 
@@ -417,4 +420,5 @@ button:hover {
 
 
 </body>
+{% endblock %}
 </html>

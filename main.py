@@ -28,6 +28,10 @@ def Stub():
 def video():
     return render_template("Mini-labs.html")
 
+@app.route('/schedule2/')
+def schedule2():
+    return render_template("schedule2.html")
+
 # --Simon--
 @app.route('/awards/')
 def awards():
