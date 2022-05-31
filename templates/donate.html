@@ -264,8 +264,12 @@
         // here is censor
         censor_user()
         formData["userName"] = document.getElementById("userName").value;
+        localStorage.setItem("userNameVarKey", formData["userName"]);
+
         censor_comment()
         formData["comment2"] = document.getElementById("comment2").value;
+        localStorage.setItem("comment2VarKey", formData["comment2"]);
+
         return formData;
     }
 
@@ -275,9 +279,10 @@
         var newRow = table.insertRow(table.length);
         cell1 = newRow.insertCell(0);
         // here is where the output is
-        cell1.innerHTML =data.userName + ": ";
+        // working to make it withstand a refresh
+        cell1.innerHTML = localStorage.getItem("userNameVarKey") + ": ";
         cell2 = newRow.insertCell(1);
-        cell2.innerHTML = data.comment2;
+        cell2.innerHTML = localStorage.getItem("comment2VarKey") + ": ";
         cell4 = newRow.insertCell(2);
         cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
     }
