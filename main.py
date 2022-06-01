@@ -19,6 +19,9 @@ app.register_blueprint(app_crud_api)
 def index():
     return render_template("index.html")
 
+@app.route('/blog/')
+def blog():
+    return render_template("blog.html")
 
 @app.route('/stub/')
 def Stub():
@@ -31,6 +34,10 @@ def video():
 @app.route('/schedule2/')
 def schedule2():
     return render_template("schedule2.html")
+
+@app.route('/signup/')
+def signup():
+    return render_template("signup.html")
 
 # --Simon--
 @app.route('/awards/')
