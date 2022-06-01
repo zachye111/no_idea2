@@ -101,10 +101,86 @@
 <!--<div class="bottom"></div>-->
 
 <button onClick = "black_and_white()">Grey</button>
-<button onClick = "reload()">In Color</button>
+<button onClick = "in_color()">In Color</button>
 <button onClick = real_scroll()>Scroll</button>
 
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>-->
+<!--            <form autocomplete="off" onsubmit="onFormSubmit()">-->
+
+<!--                <div>-->
+<!--                    <label for="userName">User Name</label>-->
+<!--                    <input type="text" name="userName" id="userName">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <label for="comment2"></label>-->
+<!--                    <textarea placeholder="Leave your Comments here" rows = "5" cols = "100%" name = "comment2" id="comment2" required></textarea>-->
+<!--                </div>-->
+
+<!--                <div class="form_action&#45;&#45;button">-->
+<!--                    <input class="comment_buttons" type="submit" value="Post">-->
+<!--                    <input class="comment_buttons" type="reset" value="Delete">-->
+<!--                </div>-->
+<!--            </form>-->
+<!--    </tr>-->
+<!--    <td>-->
+<!--        <table class="list" id="storeList">-->
+
+<!--            <tbody id="output">-->
+
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </td>-->
+<!--    </td>-->
+<!--</table>-->
+
+
+
+
 <script>
+
+
+//    function onFormSubmit(e) {
+//        event.preventDefault();
+//        var formData = readFormData();
+//        if (selectedRow == null){
+//            insertNewRecord(formData);
+//        }
+//        else{
+//            updateRecord(formData);
+//        }
+//        resetForm();
+//    }
+//
+//    //Retrieve the data
+//    function readFormData() {
+//        var formData = {};
+//        // here is censor
+//        censor_user()
+//        formData["userName"] = document.getElementById("userName").value;
+//        localStorage.setItem("userNameVarKey", formData["userName"]);
+//
+//        censor_comment()
+//        formData["comment2"] = document.getElementById("comment2").value;
+//        localStorage.setItem("comment2VarKey", formData["comment2"]);
+//
+//        return formData;
+//    }
+//
+//    //Insert the data
+//    function insertNewRecord(data) {
+//
+//        document.getElementById("pleasant_commenter7").innerHTML = localStorage.getItem("userNameVarKey") + ": ";
+//        document.getElementById("pleasant_comment7").innerHTML = localStorage.getItem("comment2VarKey") + ": ";
+//        cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+//    }
+//        function insertNewRecord(data) {
+//            document.getElementById("pleasant_comment7").innerHTML = document.getElementById("comment2").value;
+//            document.getElementById("pleasant_commenter7").innerHTML = document.getElementById("userName").value;
+//        }
+
+
 
     function black_and_white() {
         document.getElementById("volley_ball_pic1").id = "grey"
@@ -116,6 +192,7 @@
         document.getElementById("volley_ball_pic1").id = "contrast"
         document.getElementById("volley_ball_pic2").id = "contrast"
         document.getElementById("volley_ball_pic3").id = "contrast"
+
     }
 
 
@@ -269,7 +346,7 @@
     }
 
     #contrast {
-        filter: none;
+        filter: contrast(100%);
     }
 
     button {

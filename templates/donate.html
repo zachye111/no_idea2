@@ -278,7 +278,7 @@
         var table = document.getElementById("storeList").getElementsByTagName('tbody')[0];
         var newRow = table.insertRow(table.length);
         cell1 = newRow.insertCell(0);
-        // here is where the output is
+        // here is where the outpuFt is
         // working to make it withstand a refresh
         cell1.innerHTML = localStorage.getItem("userNameVarKey") + ": ";
         cell2 = newRow.insertCell(1);
@@ -286,6 +286,20 @@
         cell4 = newRow.insertCell(2);
         cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
     }
+
+    window.onload = function() {
+        var reloading = sessionStorage.getItem("reloading");
+        if (reloading) {
+            sessionStorage.removeItem("reloading");
+            insertNewRecord(data);
+        }
+    }
+
+    function reloadP() {
+        sessionStorage.setItem("reloading", "true");
+        document.location.reload();
+    }
+
 
     //Edit the data
     function onEdit(td) {
