@@ -83,13 +83,28 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <!--root menu -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Info
+                                Roster
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/jokes">Varsity Roster</a>
                                 <a class="dropdown-item" href="/jokes2">JV Roster</a>
                                 <a class="dropdown-item" href="/jokes3">Freshman Roster</a>
-                                <a class="dropdown-item" href="/schedule">Schedule</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Schedule
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/schedule">List View</a>
+                                <a class="dropdown-item" href="/schedule2">Calendar View</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Awards
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/awards">Awards</a>
                                 <a class="dropdown-item" href="/donate">Highlight Videos</a>
                                 <a class="dropdown-item" href="/Snap_Shots">Snap Shots</a>
@@ -97,11 +112,28 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Extra
+                                Highlights
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/donate">Highlights</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Summer Camp
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/signup">Sign-Up</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Player Resources
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/moviequiz">Quiz</a>
                                 <a class="dropdown-item" href={{ url_for('crud.calendar') }}>Calendar</a>
+                                <a class="dropdown-item" href="/flashcard">Plays</a>
                             </div>
                         </li>
 
@@ -125,29 +157,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 <a class="nav-link" href={{ url_for('crud.logout') }}>Logout</a>
                             </div>
                         </li>
-                        <div style="display: flex; align-items: center" onclick="showSearch()">
-                            <i style="color: black" class="fas fa-search"></i>
-                        </div>
-                        <div id="form-group" class="form-group" style="display: none">
-                            <input type="text" style="margin-bottom: 15px;" class="form-control" id="term" placeholder="enter search term" autocomplete="off">
-                            <button onclick="search_data()" id="searchButton" style="margin-bottom: 15px">Search Data</button>
-                            <div class="resultsContainer" style="color: var(--turqoise)">
-<!--                                 <div class="column" id="result"> -->
-<!--                                 </div> -->
-                                <table class="searchTable">
-                                <tr>
-                                    <th> Class </th>
-                                    <th> Teacher </th>
-                                    <th> Students </th>
-                                </tr>
-                                </table>
-                                <table id="result" class="searchTable">
-                                </table>
-                            </div>
-
-                        </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" id="darkSwitch" name="theme" /><label for="switch"> Dark Mode</label>
                         </div>
                     </ul>
                 </div>
