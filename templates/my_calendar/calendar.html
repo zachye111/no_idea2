@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+{% extends "layouts/base.html" %}
+
+<head>
+    <title>Cool Calendar</title>
+    <meta charset="UTF-8" />
+</head>
+{% block body %}
+<body>
+<div class="calendar-month">
+    <section class="calendar-month-header">
+        <div
+                id="selected-month"
+                class="calendar-month-header-selected-month"
+        ></div>
+        <section class="calendar-month-header-selectors">
+            <span id="previous-month-selector"><</span>
+            <span id="present-month-selector">Today</span>
+            <span id="next-month-selector">></span>
+        </section>
+    </section>
+
+    <ol
+            id="days-of-week"
+            class="day-of-week"
+    /></ol>
+
+    <ol
+            id="calendar-days"
+            class="days-grid"
+    >
+    </ol>
+</div>
+
+<!-- <div id="app"></div> -->
+
+<script src="index.js"></script>
+</body>
+{% endblock %}
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cool Calendar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+</head>
+<body>
+    <h3> MY CALENDAR</h3>
+    <div id="calendar"></div>
+    <script>
+        let calendarEl = document.getElementById('calendar');
+
+        let calendar = new FullCalendar.Calendar(calendarEl, {
+            events: [
+                {% for event in events %}
+                {
+                    title : '{{event.todo}}',
+                    start : '{{event.date}}',
+                }
+                {% endfor %}
+            ]
+        });
+
+        calendar.render();
+    </script>
+
+<script src="index.js"></script>
+</body>
+</html>
+-->

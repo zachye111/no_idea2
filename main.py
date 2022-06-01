@@ -10,8 +10,10 @@ from templates.api.webapi import joke_list
 from templates.api.webapi import joke_list2
 from templates.api.webapi import joke_list3
 from templates.api.webapi import joke_list4
+from my_calendar import my_cal
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
+app.register_blueprint(my_cal)
 
 
 # connects default URL to render index.html
@@ -19,9 +21,14 @@ app.register_blueprint(app_crud_api)
 def index():
     return render_template("index.html")
 
-@app.route('/blog/')
-def blog():
-    return render_template("blog.html")
+@app.route('/notes/')
+def notes():
+    return render_template("notes.html")
+
+@app.route('/calendar/')
+def calendar():
+    return render_template("calendar.html")
+
 
 @app.route('/stub/')
 def Stub():
