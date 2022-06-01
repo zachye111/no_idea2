@@ -8,6 +8,10 @@
 <button id="submit">Submit Quiz</button>
 <div id="results"></div>
 
+<div id="congrats_here">
+    <p></p>
+</div>
+
 <style>
     body{
         font-size: 15px;
@@ -40,6 +44,25 @@
     #submit:hover{
         background-color: #38a;
     }
+
+    #glow {
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+    }
+
 </style>
 
 
@@ -124,11 +147,22 @@
                     // color the answers red
                     answerContainers[questionNumber].style.color = '#ed1b2d';
                 }
+
+                if (numCorrect > 4) {
+                    document.getElementById("congrats_here").innerHTML = "100% Congratulations"
+                    document.getElementById("congrats_here").id = "glow"
+                }
+                if (numCorrect === 4) {
+                    document.getElementById("congrats_here").innerHTML = "Great Job!"
+                    // document.getElementById("congrats_here").id = "glow"
+                }
+
             };
 
             // show number of correct answers out of total
             resultsContainer.innerHTML = `${numCorrect} out of ${indexes.length}`;
         }
+
 
         const quizContainer = document.getElementById('quiz');
         const resultsContainer = document.getElementById('results');
@@ -240,6 +274,8 @@
         // Event listeners
         submitButton.addEventListener('click', showResults);
     })();
+
+
 </script>
 
 {% endblock %}
