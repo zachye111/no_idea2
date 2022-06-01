@@ -34,6 +34,10 @@ def calendar():
 def Stub():
     return render_template("stub.html")
 
+@app.route('/flashcard/')
+def flashcard():
+    return render_template("flashcard.html")
+
 @app.route('/Mini-labs/')
 def video():
     return render_template("Mini-labs.html")

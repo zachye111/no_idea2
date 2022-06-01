@@ -126,11 +126,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" style="color: #00356e" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Extra
+                                Player Resources
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/moviequiz">Quiz</a>
                                 <a class="dropdown-item" href={{ url_for('crud.calendar') }}>Calendar</a>
+                                <a class="dropdown-item" href="/flashcard">Plays</a>
                             </div>
                         </li>
 
@@ -154,9 +155,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                                 <a class="nav-link" href={{ url_for('crud.logout') }}>Logout</a>
                             </div>
                         </li>
-                        </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" id="darkSwitch" name="theme" /><label for="switch"> Dark Mode</label>
                         </div>
                     </ul>
                 </div>
