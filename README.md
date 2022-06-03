@@ -1,5 +1,7 @@
 {% include navigation.html %}
 
+[Github Pages](https://zachye111.github.io/natm2/)
+
 # no_idea2 
 
 
